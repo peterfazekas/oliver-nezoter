@@ -2,6 +2,8 @@ package hu.auditorium.model.domain;
 
 public class Chair {
 
+    private static final String OCCUPIED = "x";
+
     private final int row;
     private final int number;
     private final Category category;
@@ -22,6 +24,10 @@ public class Chair {
         return number;
     }
 
+    public int getCategoryId() {
+        return category.getId();
+    }
+
     public int getPrice() {
         return category.getPrice();
     }
@@ -36,6 +42,6 @@ public class Chair {
 
     @Override
     public String toString() {
-        return occupied ? "x" : String.valueOf(category.getId());
+        return occupied ? OCCUPIED : String.valueOf(getCategoryId());
     }
 }

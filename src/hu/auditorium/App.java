@@ -31,7 +31,10 @@ public class App {
         System.out.println("A kiválasztott szék " + (chairService.isGivenChairOccupied(row, number) ? "már foglalt" : "még üres"));
         System.out.println("3. feladat: Az előadásra eddig " + chairService.getOccupiedChairCount()
                 + " jegyet adtak el, ez a nézőtér " + chairService.getOccupiedChairPercent() + "-a");
+        System.out.println("4. feladat: A legtöbb jegyet a(z) " + chairService.getMostPopularChairCategory()
+                + ". árkategóriában értékesítették");
         System.out.println("5. feladat: A színház jelenlegi bevétele " + chairService.countTotalIncome() + " Ft lenne.");
+        System.out.println("6. feladat: A nézőtéren " + chairService.getSingleFreeChairCount() + " db egyedülálló üres hely van.");
         fileWriter.write(chairService.getAuditoriumStatus());
     }
 }
